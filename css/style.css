@@ -7,6 +7,7 @@
   background-color: #fdf2e9;
   height: 9.6rem; /*because we want header to be sticky */
   padding: 0 4.8rem;
+  position: relative;
 }
 .logo {
   height: 2.2rem;
@@ -18,7 +19,7 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 3.2rem;
+  gap: 4.8rem;
 }
 
 .main-nav-link:link,
@@ -33,7 +34,7 @@
 
 .main-nav-link:hover,
 .main-nav-link:active {
-  color: #e67e22;
+  color: #cf711f;
 }
 
 .main-nav-link.nav-cta:link,
@@ -49,9 +50,44 @@
   background-color: #cf711f;
 }
 
-/* ********** */
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
 
-/* ****** */
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* STICKY NAVIGATION */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+
 /* Hero Section */
 .section-hero {
   background-color: #fdf2e9;
@@ -352,33 +388,33 @@
   padding: 9.6rem 0;
 }
 
-.princing-plan {
+.pricing-plan {
   border-radius: 11px;
 
   width: 75%;
 }
 
-.princing-plan--starter {
+.pricing-plan--starter {
   justify-self: end;
   border: 2px solid #fdf2e9;
   padding: 4.6rem;
 }
 
-.princing-plan--complete {
+.pricing-plan--complete {
   background-color: #fdf2e9;
   padding: 4.8rem;
   position: relative;
   overflow: hidden;
 }
 
-.princing-plan--complete {
+.pricing-plan--complete {
   background-color: #fdf2e9;
   padding: 4.8rem;
   position: relative;
   overflow: hidden;
 }
 
-.princing-plan--complete::after {
+.pricing-plan--complete::after {
   content: 'Best value';
   position: absolute;
   top: 6%;
@@ -460,9 +496,7 @@
   line-height: 1.8;
 }
 
-
 /* Call to Action Section */
-
 
 .section-cta {
   /* top / right / bottom / left */
@@ -506,7 +540,7 @@
       rgba(235, 151, 78, 0.35),
       rgba(230, 125, 34, 0.35)
     ),
-    url("../img/eating.jpg");
+    url('../img/eating.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -621,8 +655,6 @@
 .footer-link:active {
   color: #555;
 }
-
-
 
 /* Test Example */
 /*h1 {

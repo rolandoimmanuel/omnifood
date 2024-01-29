@@ -61,6 +61,7 @@ html {
   */
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth; /*does not work on safari (continue in js) */
 }
 
 body {
@@ -68,6 +69,7 @@ body {
   font-weight: 400;
   color: #555;
   line-height: 1;
+  overflow-x: hidden;
 }
 
 /*General Reuseable Component */
@@ -236,6 +238,7 @@ strong {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 
 
